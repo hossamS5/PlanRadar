@@ -10,6 +10,7 @@ export default {
         mainTheme: "#000000",
         grayPalette: {
           100: "#f5f5f5",
+          300: "#D9D9D9",
         },
         primary: {
           100: "#d2e8f4",
