@@ -7,6 +7,38 @@ body {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "RB";
+  font-display: swap;
+  font-weight: 400;
+  src: url("./assets/fonts/RB.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "RB";
+  font-display: swap;
+  font-weight: 500;
+  src: url("./assets/fonts/RB.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RB";
+  font-display: swap;
+  font-weight: 700;
+  src: url("./assets/fonts/RBBlod.ttf") format("truetype");
+}
+@font-face {
+  font-family: "RB";
+  font-display: swap;
+  font-weight: 850;
+  src: url("./assets/fonts/RBBlod.ttf") format("truetype");
+}
+
+@layer components {
+  body {
+    @apply font-rb;
+  }
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -33,4 +65,39 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.appContainer {
+  max-width: 1280px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .appContainer {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 3px;
+  background-color: #77b9df;
+  border-radius: 30px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2b84b8;
+  border-radius: 30px;
+}
+
+::selection {
+  background-color: #2b84b8;
+  border-radius: 30px;
+  color: white;
 }
