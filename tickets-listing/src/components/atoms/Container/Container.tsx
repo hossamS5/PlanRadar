@@ -6,7 +6,7 @@ interface IProps {
 }
 
 const Container: React.FC<IProps> = ({ children, classess = "" }) => {
-  return <div className={`appContainer w-full  ${classess}`}>{children}</div>;
+  return <div className={`appContainer w-full ${classess}`}>{children}</div>;
 };
 
 export default Container;

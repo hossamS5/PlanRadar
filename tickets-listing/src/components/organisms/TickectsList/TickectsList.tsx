@@ -1,42 +1,17 @@
 import React from "react";
 import TicketCard from "../../molecules/TicketCard/TicketCard";
+import { ListCard } from "../../../types";
 
-const TickectsList: React.FC = () => {
-  const list = [
-    {
-      id: 1,
-      subject: "Projects",
-      priority: "low",
-      status: "new",
-      description: "I am ok please call me now",
-    },
-    {
-      id: 2,
-      subject: "Development",
-      priority: "high",
-      status: "in progress",
-      description: "I am ok please call me now",
-    },
+interface IProps {
+  tickets: ListCard[];
+}
 
-    {
-      id: 3,
-      subject: "Electricty",
-      priority: "high",
-      status: "new",
-      description: "I am ok please call me now as i have a big problem",
-    },
-    {
-      id: 4,
-      subject: "Building",
-      priority: "low",
-      status: "done",
-      description: "I am ok please call me now",
-    },
-  ];
+const TickectsList: React.FC<IProps> = ({ tickets }) => {
+  if (tickets?.length === 0) return <p>No tickets available</p>;
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {list.map((item) => (
+      {tickets.map((item) => (
         <TicketCard key={item.id} card={item} />
       ))}
     </section>

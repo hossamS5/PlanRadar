@@ -1,0 +1,69 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TicketCard > match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full p-4 rounded-[20px] border border-grayPalette-300 flex flex-col gap-4 shadow-md cursor-pointer"
+    data-testid="ticket-card"
+  >
+    <div
+      class="flex items-center justify-between gap-3"
+    >
+      <h2
+        class="text-mainTheme text-xl font-bold"
+      >
+        Projects
+      </h2>
+      <span
+        class="p-1 flex items-center bg-primary-300 text-white rounded-lg text-xs"
+      >
+        new
+      </span>
+    </div>
+    <div
+      class="text-[#464646]"
+    >
+      I am ok please call me now
+    </div>
+    <div
+      class="text-xs bg-primary-800 text-white rounded-lg p-[6px] w-fit"
+    >
+      low
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`TicketsList > match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="w-full p-4 rounded-[20px] border border-grayPalette-300 flex flex-col gap-4 shadow-md cursor-pointer"
+    data-testid="ticket-card"
+  >
+    <div
+      class="flex items-center justify-between gap-3"
+    >
+      <h2
+        class="text-mainTheme text-xl font-bold"
+      >
+        Projects
+      </h2>
+      <span
+        class="p-1 flex items-center bg-primary-300 text-white rounded-lg text-xs"
+      >
+        new
+      </span>
+    </div>
+    <div
+      class="text-[#464646]"
+    >
+      I am ok please call me now
+    </div>
+    <div
+      class="text-xs bg-primary-800 text-white rounded-lg p-[6px] w-fit"
+    >
+      low
+    </div>
+  </div>
+</DocumentFragment>
+`;

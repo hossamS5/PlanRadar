@@ -1,0 +1,33 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Nav > match snapshot 1`] = `
+<DocumentFragment>
+  <header
+    class="h-[96px] inset-x-0 top-0 z-50  text-mainTheme sticky bg-white shadow-md"
+  >
+    <div
+      class="appContainer w-full h-full"
+    >
+      <nav
+        class="flex items-center gap-16 justify-between w-full h-full"
+      >
+        <svg
+          data-testid="PlanradarLogo"
+        />
+        <div
+          class="flex items-center gap-2"
+        >
+          <span
+            class="text-primary-700 text-sm font-medium"
+          >
+            Hossam Salem
+          </span>
+          <svg
+            data-testid="UsersIcon"
+          />
+        </div>
+      </nav>
+    </div>
+  </header>
+</DocumentFragment>
+`;
