@@ -1,38 +1,35 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import Container from "../components/atoms/Container/Container";
 import TickectsList from "../components/organisms/TickectsList/TickectsList";
+import { tickets } from "../../db.json";
+import { ListCard } from "../types";
 
 const Landing: React.FC = () => {
-  const tickets = [
-    {
-      id: 1,
-      subject: "Projects",
-      priority: "low",
-      status: "new",
-      description: "I am ok please call me now",
-    },
-    {
-      id: 2,
-      subject: "Development",
-      priority: "high",
-      status: "in progress",
-      description: "I am ok please call me now",
-    },
-    {
-      id: 3,
-      subject: "Electricty",
-      priority: "high",
-      status: "new",
-      description: "I am ok please call me now as i have a big problem",
-    },
-    {
-      id: 4,
-      subject: "Building",
-      priority: "low",
-      status: "done",
-      description: "I am ok please call me now",
-    },
-  ];
+  const [fetchedTickets, setFetchedTickets] = useState<ListCard[]>(
+    tickets.slice(0, 10)
+  );
+  const loaderRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        loadMoreItems();
+      }
+    });
+    if (loaderRef.current) observer.observe(loaderRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const loadMoreItems = useCallback(() => {
+    //Fetch just 10 items every time
+    if (tickets.length === fetchedTickets.length) return;
+
+    setFetchedTickets((prevItems) => {
+      const nextItems = tickets.slice(prevItems.length, prevItems.length + 10);
+      return [...prevItems, ...nextItems];
+    });
+  }, [tickets]);
 
   return (
     <Container>
@@ -43,7 +40,9 @@ const Landing: React.FC = () => {
           </h1>
         </section>
 
-        <TickectsList tickets={tickets} />
+        <TickectsList tickets={fetchedTickets} />
+
+        <div id="observer" ref={loaderRef} className="h-[20px]" />
       </div>
     </Container>
   );

@@ -3,7 +3,7 @@
 exports[`TicketsList > matches snapshot 1`] = `
 <DocumentFragment>
   <section
-    class="grid grid-cols-1 md:grid-cols-2 gap-6"
+    class="grid grid-cols-1 gap-6 md:grid-cols-2"
   >
     <div
       class="w-full p-4 rounded-[20px] border border-grayPalette-300 flex flex-col gap-4 shadow-md cursor-pointer"
