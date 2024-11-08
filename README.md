@@ -26,8 +26,10 @@
 
 ## Installation
 1- git clone https://github.com/hossamS5/PlanRadar.git
+
 2- npm install
-# or
+
+### or
 yarn install
 
 
@@ -35,19 +37,19 @@ yarn install
 ## Running the Application
 Start the application in development mode:
 npm run dev
-# or
+### or
 yarn dev
 
 
 
 ## Running Unit Test
 npm test
-# or
+### or
 npm run test:ui (for viewing in browser)
 
 
 
 # Deployed Link
 
-## https://plan-radar-kappa.vercel.app/
+#### https://plan-radar-kappa.vercel.app/
 
