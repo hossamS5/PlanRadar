@@ -9,7 +9,7 @@ exports[`Nav > match snapshot 1`] = `
       class="appContainer w-full h-full"
     >
       <nav
-        class="flex items-center gap-16 justify-between w-full h-full"
+        class="flex items-center justify-between w-full h-full gap-16"
       >
         <svg
           data-testid="PlanradarLogo"
@@ -18,7 +18,7 @@ exports[`Nav > match snapshot 1`] = `
           class="flex items-center gap-2"
         >
           <span
-            class="text-primary-700 text-sm font-medium"
+            class="text-sm font-medium text-center text-primary-700"
           >
             Hossam Salem
           </span>
